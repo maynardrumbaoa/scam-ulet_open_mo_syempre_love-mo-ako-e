@@ -184,7 +184,7 @@ h1,
 }
 
 .modal__wrap {
-  background: rgba(20, 29, 25,0.3);
+  background: rgba(220, 225, 225,0.3);
   backdrop-filter: blur(10px);
   color: #27221f;
   padding: 1em;
