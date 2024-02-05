@@ -1,0 +1,312 @@
+
+
+@import url("https://fonts.cdnfonts.com/css/love-letter-tw");
+@import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap");
+@import url("https://fonts.cdnfonts.com/css/chentalle");
+
+@import url("https://fonts.cdnfonts.com/css/maulysia");
+/*==================================== Some styles to spruce up the demo =====================================*/
+body {
+  background-image: linear-gradient(
+      123deg,
+      rgba(0, 0, 0, 1),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("bg.jpg");
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #5e5e5e;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  /* text-shadow: 1px 1px 1px #fff; */
+  line-height: 1.5;
+  text-align: center;
+  font-family: "Love LetterTW", sans-serif;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+h1 {
+  font-size: 3rem;
+
+  line-height: 1.2;
+  margin: 0;
+}
+@media (min-width: 500px) {
+  h1 {
+    font-size: 2.25em;
+  }
+}
+@media (min-width: 1000px) {
+  h1 {
+    font-size: 4.5em;
+  }
+}
+h2 {
+  font-size: 1em;
+  line-height: 1.2;
+  margin: 1.414em 0 0.5em;
+}
+/* @media (min-width: 500px) {
+h2 {
+   font-size: 1.5em;
+}
+}
+@media (min-width: 800px) {
+h2 {
+   font-size: 1.8em;
+}
+} */
+
+h1,
+.love {
+  background: linear-gradient(
+    to right,
+    #fb7319 0%,
+    #d53a23 12.5%,
+    #8e2649 25%,
+    #319197 37.5%,
+    #fb7319 50%,
+    #d53a23 62.5%,
+    #8e2649 75%,
+    #319197 87.5%,
+    #fb7319 100%
+  );
+  font-family: "Tangerine", cursive;
+  /* font-family: "Maulysia", sans-serif; */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  font-size: 5rem;
+  background-size: 200% 200%;
+  margin: 0.5em 0 2.5em;
+  animation: animation 7s linear infinite;
+  text-align: center;
+  word-break: keep-all;
+
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.love {
+  border: 1px dashed red;
+  font-size: 2rem;
+  padding: 12px;
+  margin-bottom: 1rem;
+}
+@keyframes animation {
+  0% {
+    background-position: 0 0%;
+  }
+  100% {
+    background-position: -200% 0%;
+  }
+}
+
+.wrap {
+  padding: 1em;
+  text-align: center;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+@media (min-width: 700px) {
+  .wrap {
+    padding: 1em 2em;
+  }
+}
+/*==================================== Our Modal Window styles =====================================*/
+.modal {
+  display: inline-block;
+  border-radius: 1rem;
+  
+
+  height: auto;
+}
+@media (min-width: 43.75em) {
+  .modal {
+    padding: 1.5em;
+  }
+}
+.modal > label {
+  /* background: #faf9e1; */
+  border: 1px dashed #fff;
+  text-shadow: 2px 2px 13px rgba(0, 0, 0, 0.178);
+  color: rgb(19, 17, 17);
+  background: rgba(250, 249, 225, 0.1);
+  backdrop-filter: blur(5px);
+  border-radius: 0.2rem;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  gap: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 0.75em 1.5em;
+  text-shadow: 1px 1px 1px #fff;
+  transition: all 0.55s;
+}
+.modal > label:hover {
+  transform: scale(0.97);
+}
+.modal__overlay {
+  background-image:
+    url("bg.jpg");
+
+  /* Set a specific height */
+  height: 100%;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  text-shadow: none;
+  top: 0;
+  z-index: 600;
+}
+
+.modal__overlay::-webkit-scrollbar {
+  display: none;
+}
+
+.modal__wrap {
+  background: rgba(20, 29, 25,0.3);
+  backdrop-filter: blur(10px);
+  color: #27221f;
+  padding: 1em;
+  position: relative;
+  margin: 0 auto;
+  max-width: clamp(300px, 400px, 500px);
+
+  margin-block: 2rem;
+  padding: 2rem;
+
+  box-shadow: 11px 10px 35px -15px rgba(0, 0, 0, 0.75) inset;
+  -webkit-box-shadow: 11px 10px 35px -15px rgba(0, 0, 0, 0.75) inset;
+  -moz-box-shadow: 11px 10px 35px -15px rgba(0, 0, 0, 0.75) inset;
+}
+
+/* @media (min-width: 50em) {
+.modal__wrap {
+   padding: 1.75em;
+}
+} */
+/* @media (min-height: 37.5em) {
+.modal__wrap {
+   left: 50%;
+   position: absolute;
+   top: 50%;
+   transform: translate(-50%, -80%);
+}
+} */
+.modal__wrap label {
+  background: rgb(0, 0, 0, 0.75);
+  border: 1px solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  display: grid;
+  justify-content: center;
+  place-items: center;
+
+  line-height: 1.5;
+
+  position: sticky;
+  top: 20px;
+  float: right;
+  margin-block: 1rem;
+
+  height: 30px;
+  width: 30px;
+
+  animation: eks 10000ms;
+}
+@keyframes eks {
+  from {
+    opacity: 0;
+  }
+  to {
+    /* opacity: 1; */
+  }
+}
+
+.modal__wrap h2 {
+  margin-bottom: 1em;
+  text-transform: uppercase;
+}
+.modal__wrap p {
+  text-align: justify;
+  font-size: clamp(16px, 1rem, 18px);
+  text-indent: 1.5rem;
+}
+
+.modal__wrap p::first-letter {
+  font-size: larger;
+  line-height: 2;
+}
+.modal input:focus ~ label {
+  transform: scale(0.97);
+}
+input {
+  position: absolute;
+  top: -1000px;
+}
+.modal__overlay {
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all 0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  z-index: -100;
+  overflow-y: scroll;
+}
+input:checked ~ .modal__overlay {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 800;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  filter: grayscale(60%);
+  border-radius: 0.8rem;
+  transition: filter 300ms ease-in-out;
+}
+img:hover{
+    filter: grayscale(0);
+}
+.front {
+  color: red;
+  animation: beat 250ms infinite alternate;
+  transform-origin: center;
+  filter: drop-shadow(5px 5px 15px black);
+}
+
+.exit i {
+  color: #faf9e1;
+
+  transform-origin: center;
+}
+
+/* Heart beat animation */
+@keyframes beat {
+  to {
+    transform: scale(1.4);
+  }
+}
+
+.button {
+  height: 500px;
+  display: grid;
+  place-items: center;
+}
